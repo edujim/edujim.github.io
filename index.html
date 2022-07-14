@@ -1,687 +1,239 @@
 <!DOCTYPE html>
-<html>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
 
 <head>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Shooping Center | Home</title>
+  <link rel="stylesheet" href="css/style.css">
 
-        body {
-            background-color: #f1f1f1;
-            padding: 0px;
-            font-family: Arial;
-        }
-        /* Center website */
-
-        .main {
-            max-width: 1000px;
-            margin: auto;
-        }
-
-        h1 {
-            font-size: 50px;
-            word-break: break-all;
-        }
-
-        .row {
-            margin: 0px -0px;
-        }
-        /* Add padding BETWEEN each column */
-
-        .row,
-        .row>.column {
-            padding: 5px;
-        }
-        /* Create three equal columns that floats next to each other */
-
-        .column {
-            float: left;
-            width: 25%;
-            display: none;
-            /* Hide all elements by default */
-        }
-        /* Clear floats after rows */
-
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-        /* Content */
-
-        .content {
-            background-color: white;
-            padding: 13px;
-        }
-        /* The "show" class is added to the filtered elements */
-
-        .show {
-            display: block;
-        }
-        /* Style the buttons */
-
-        .btn {
-            border: none;
-            outline: none;
-            padding: 12px 16px;
-            background-color: white;
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            background-color: #ddd;
-        }
-
-        .btn.active {
-            background-color: #666;
-            color: white;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        .flip-box {
-            background-color: transparent;
-            width: 300px;
-            height: 200px;
-            border: 0px solid #f1f1f1;
-            perspective: 1000px;
-        }
-
-        .flip-box-inner {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            transition: transform 0.8s;
-            transform-style: preserve-3d;
-        }
-
-        .flip-box:hover .flip-box-inner {
-            transform: rotateY(180deg);
-        }
-
-        .flip-box-front,
-        .flip-box-back {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-        }
-
-        .flip-box-front {
-            background-color: #bbb;
-            color: black;
-        }
-
-        .flip-box-back {
-            background-color: rgb(57, 59, 59);
-            color: white;
-            transform: rotateY(180deg);
-        }
-    </style>
+  <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+  <link rel="shortcut icon" href="images/heart.png">
+  <script src="js/myshooping.js" async></script>
 </head>
 
 <body>
-    <center>
-        <!-- MAIN (Center website) -->
-        <div class="main">
-            <div id="myBtnContainer">
-                <button class="btn active" onclick="filterSelection('all')">Todo</button>
-                <button class="btn" onclick="filterSelection('Sandalias')">Sandalias</button>
-                <button class="btn" onclick="filterSelection('Ropa')">Ropa</button>
-                <button class="btn" onclick="filterSelection('Jueguetes')">Juguetes</button>
-            </div>
-    </center>
-    <!-- Portfolio Gallery Grid -->
-    <div class="row">
-        <div class="column Sandalias">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Sandalias/01 Sandalia BobEsponja.jpg" alt="Sandalias" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio: $10 dls.</h2>
-                            <h3>Tallas: 36 al 41</h3>
-                            <h4>Tallas sujetas a disponibilidad.</h4>
-                            <p>Marca: Ginza</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <header>
+    <div class="navbar">
+      <strong>
+        <div class="logo">
+          My Shooping Center
         </div>
-        <div class="column Sandalias">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Sandalias/02 Sandalia Multicolor Plataforma.jpeg" alt="Sandalias" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio: $7 dls.</h2>
-                            <h3>Tallas: 36 al 41</h3>
-                            <h4>Tallas sujetas a disponibilidad.</h4>
-                            <p>Marca: Ginza</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Sandalias">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Sandalias/03 Sandalia Multicolor Pacha.jpg" alt="Sandalias" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio: $7 dls.</h2>
-                            <h3>Tallas: 36 al 41</h3>
-                            <h4>Tallas sujetas a disponibilidad.</h4>
-                            <p>Marca: Ginza</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Sandalias">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Sandalias/04 01 Sandalia Fucsia.jpg" alt="Sandalias" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio: $3.99 dls.</h2>
-                            <h3>Tallas: 36 al 41</h3>
-                            <h4>Tallas sujetas a disponibilidad.</h4>
-                            <p>Marca: Anabolena</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Sandalias">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Sandalias/04 02 Sandalia Rosada.jpg" alt="Sandalias" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio: $3.99 dls.</h2>
-                            <h3>Tallas: 36 al 41</h3>
-                            <h4>Tallas sujetas a disponibilidad.</h4>
-                            <p>Marca: Anabolena</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Sandalias">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Sandalias/04 03 Sandalia Morada.jpg" alt="Sandalias" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio: $3.99 dls.</h2>
-                            <h3>Tallas: 36 al 41</h3>
-                            <h4>Tallas sujetas a disponibilidad.</h4>
-                            <p>Marca: Anabolena</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Sandalias">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Sandalias/04 04 Sandalia Aqua.jpg" alt="Sandalias" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio: $3.99 dls.</h2>
-                            <h3>Tallas: 36 al 41</h3>
-                            <h4>Tallas sujetas a disponibilidad.</h4>
-                            <p>Marca: Anabolena</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Sandalias">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Sandalias/04 05 Sandalia Café.jpg" alt="Sandalias" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio: $3.99 dls.</h2>
-                            <h3>Tallas: 36 al 41</h3>
-                            <h4>Tallas sujetas a disponibilidad.</h4>
-                            <p>Marca: Anabolena</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Sandalias">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Sandalias/04 06 Sandalia Negra.jpg" alt="Sandalias" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio: $3.99 dls.</h2>
-                            <h3>Tallas: 36 al 41</h3>
-                            <h4>Tallas sujetas a disponibilidad.</h4>
-                            <p>Marca: Anabolena</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Sandalias">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Sandalias/05 01 Sandalia Cincha Rosada.jpg" alt="Sandalias" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio: $6.99 dls.</h2>
-                            <h3>Tallas: 36 al 41</h3>
-                            <h4>Tallas sujetas a disponibilidad.</h4>
-                            <p>Marca: Carioca</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Sandalias">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Sandalias/05 02 Sandalia Cincha Café.jpg" alt="Sandalias" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio: $6.99 dls.</h2>
-                            <h3>Tallas: 36 al 41</h3>
-                            <h4>Tallas sujetas a disponibilidad.</h4>
-                            <p>Marca: Carioca</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Sandalias">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Sandalias/05 03 Sandalia Cincha Negra.jpg" alt="Sandalias" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio: $6.99 dls.</h2>
-                            <h3>Tallas: 36 al 41</h3>
-                            <h4>Tallas sujetas a disponibilidad.</h4>
-                            <p>Marca: Carioca</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Ropa">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Ropa/01 Ropa.jpg" alt="Ropa" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio: $3.50 dls.</h2>
-                            <h3>Talla: -</h3>
-                            <p>Fardito de Segunda</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Ropa">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Ropa/02 Ropa.jpg" alt="Ropa" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio: $3.50 dls.</h2>
-                            <h3>Talla: -</h3>
-                            <p>Fardito de Segunda</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Ropa">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Ropa/03 Ropa.jpg" alt="Ropa" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio: $3.50 dls.</h2>
-                            <h3>Talla: -</h3>
-                            <p>Fardito de Segunda</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Ropa">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Ropa/04 Ropa.jpg" alt="Ropa" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio: $3.50 dls.</h2>
-                            <h3>Talla: -</h3>
-                            <p>Fardito de Segunda</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Ropa">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Ropa/05 Ropa.jpg" alt="Ropa" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio: $3.50 dls.</h2>
-                            <h3>Talla: -</h3>
-                            <p>Fardito de Segunda</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Ropa">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Ropa/06 Ropa.jpg" alt="Ropa" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio: $3.50 dls.</h2>
-                            <h3>Talla: -</h3>
-                            <p>Conjunto de Segunda</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Ropa">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Ropa/07 Ropa.jpg" alt="Ropa" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio: $3.50 dls.</h2>
-                            <h3>Talla: -</h3>
-                            <p>Conjunto de Segunda</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Ropa">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Ropa/08 Ropa.jpg" alt="Ropa" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio: $3.50 dls.</h2>
-                            <h3>Talla: -</h3>
-                            <p>Mamelucos de Segunda</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Ropa">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Ropa/09 Ropa.jpg" alt="Ropa" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio: $3.50 dls.</h2>
-                            <h3>Talla: -</h3>
-                            <p>Pijamas de Segunda</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Ropa">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Ropa/010 Ropa.jpg" alt="Ropa" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio: $3.99 dls.</h2>
-                            <h3>Talla: -</h3>
-                            <p>Pijama de Segunda</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Ropa">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Ropa/011 Ropa.jpg" alt="Ropa" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio: $3.99 dls.</h2>
-                            <h3>Talla: -</h3>
-                            <p>Mamelucos de Segunda</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Ropa">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Ropa/012 Ropa.jpg" alt="Ropa" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio: $3.99 dls.</h2>
-                            <h3>Talla: -</h3>
-                            <p>Conjunto de Segunda</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Ropa">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Ropa/013 Ropa.jpg" alt="Ropa" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio: $3.99 dls.</h2>
-                            <h3>Talla: -</h3>
-                            <p>Conjunto de Segunda</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Ropa">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Ropa/014 Ropa.jpg" alt="Ropa" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio: $3.99 dls.</h2>
-                            <h3>Talla: -</h3>
-                            <p>Conjunto de Segunda</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Ropa">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Ropa/015 Ropa.jpg" alt="Ropa" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio: $3.99 dls.</h2>
-                            <h3>Talla: -</h3>
-                            <p>Conjunto de Segunda</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Ropa">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Ropa/016 Ropa.jpg" alt="Ropa" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio: $4.99 dls.</h2>
-                            <h3>Talla: -</h3>
-                            <p>Conjunto de Segunda</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Ropa">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Ropa/017 Ropa.jpg" alt="Ropa" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio: $4.99 dls.</h2>
-                            <h3>Talla: -</h3>
-                            <p>Conjunto de Premium</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Ropa">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Ropa/018 Ropa.jpg" alt="Ropa" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio: $4.99 dls.</h2>
-                            <h3>Talla: -</h3>
-                            <p>Ropa de Segunda</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <!-- END GRID -->
+      </strong>
     </div>
-    <!-- END MAIN -->
-    <script>
-        filterSelection("all")
 
-        function filterSelection(c) {
-            var x, i;
-            x = document.getElementsByClassName("column");
-            if (c == "all") c = "";
-            for (i = 0; i < x.length; i++) {
-                w3RemoveClass(x[i], "show");
-                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-            }
+    <div class="navbar-container">
+      <div class="topnav">
+
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About</a>
+      </div>
+
+      <!--CART-->
+      <div id="cart-info" class="nav-info cart-info">
+        <span class="cart-info__icon"><i class="fas fa-shopping-cart"></i></span>
+        <p><span id="item-count">0 </span> items
+        </p>
+      </div>
+
+      <section class="cart" id="cart">
+        <h1 class="section-header">CART</h1>
+        <div class="cart-row">
+          <span class="cart-item cart-header cart-column">ITEM</span>
+          <span class="cart-price cart-header cart-column">PRICE</span>
+          <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+        </div>
+        <div class="cart-items">
+        </div>
+        <div class="cart-total">
+          <strong class="cart-total-title">Total</strong>
+          <span class="cart-total-price">$0</span>
+        </div>
+
+        <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+      </section>
+
+    </div>
+  </header>
+
+  <div class="main-container">
+    <p class="title">My Flower Bouquets Shooping Center </p>
+  </div>
+
+
+  <div id="filterButtons">
+    <button class="btn active" onclick="filterSelection('all')">All</button>
+    <button class="btn" onclick="filterSelection('Roses')">Roses</button>
+    <button class="btn" onclick="filterSelection('Tulips')">Tulips</button>
+    <button class="btn" onclick="filterSelection('Orchids')">Orchids</button>
+  </div>
+
+
+  <div class="container">
+    <!--Row 1-->
+    <div class="row">
+      <div class="products">
+        <div class="product Roses">
+          <img src="images/roses.jpg" class="product__image" alt="Roses">
+          <h5 class="product-title">DREAM SPRING</h5>
+          <p>Arrangement of mixed Roses</p>
+          <div class="shop-item-details">
+            <h3 class="product__price">$38</h3>
+            <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="product Roses">
+          <img src="images/roses1.jpg" class="product__image" alt="Roses1">
+          <h5 class="product-title">LOVELY  ROSES</h5>
+          <p>Arrangement of mixed Roses just for you</p>
+          <div class="shop-item-details">
+            <h3 class="product__price">$40</h3>
+            <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="product Roses">
+          <img src="images/roses2.jpg" class="product__image" alt="Roses2">
+          <h5 class="product-title">MY SWEET  ROSES</h5>
+          <p>Arrangement of mixed Roses just for you</p>
+          <div class="shop-item-details">
+            <h3 class="product__price">$40</h3>
+            <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <!--Row 2-->
+    <div class="row">
+      <div class="products">
+
+          <div class="product Tulips">
+          <img src="images/tulips.jpg" class="product__image" alt="Tulips">
+          <h5 class="product-title">BEAUTIFUL AFTERNOOM</h5>
+        <p>Arrangement of mixed Tulips just for U!</p>
+          <div class="shop-item-details">
+            <h3 class="product__price">$38</h3>
+            <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="product Tulips">
+          <img src="images/tulips1.jpg" class="product__image" alt="Tulips1">
+          <h5 class="product-title">IN THE POCKET</h5>
+          <p> Arrangement of mixed Tulips just for U</p>
+          <div class="shop-item-details">
+            <h3 class="product__price">$48</h3>
+            <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="product Tulips">
+          <img src="images/tulips2.jpg" class="product__image" alt="Tulips2">
+          <h5 class="product-title">BEAUTIFUL JUST FOR YOU</h5>
+        <p>Arrangement of mixed Tulips just for You!</p>
+          <div class="shop-item-details">
+            <h3 class="product__price">$53</h3>
+            <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+          </div>
+        </div>
+  
+
+      </div>
+
+    </div>
+
+        <!--Row 3-->
+    <div class="row">
+      <div class="products">
+        <div class="product Orchids">
+          <img src="images/orchids.jpg" class="product__image" alt="Orchids">
+          <h5 class="product-title"> ORCHIDS ARE AWESOME</h5>
+          <p>Arrangement of mixed Orchids just for a present</p>
+          <div class="shop-item-details">
+            <h3 class="product__price">$43</h3>
+            <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="product Orchids">
+          <img src="images/orchids1.jpg" class="product__image" alt="Orchids1">
+          <h5 class="product-title"> ORCHIDS FOR A LIFE</h5>
+          <p>Arrangement of mixed Orchids in a great jar</p> 
+          <div class="shop-item-details">
+            <h3 class="product__price">$48</h3>
+            <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+          </div>
+        </div>
+  
+        <div class="product Orchids">
+          <img src="images/orchids2.jpg" class="product__image" alt="Orchids2">
+          <h5 class="product-title"> AWESOME & BEAUTIFUL</h5>
+            <p> Arrangement of mixed Orchids just for a present</p>
+          <div class="shop-item-details">
+            <h3 class="product__price">$53</h3>
+            <button class="btn btn--primary ADD_TO_CART">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <footer style="text-align:center; background-color: rgba(135, 97, 97, 0.472);">
+    <h3>My Shooping Center</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde odio voluptas ea natus, itaque, enim aliquid eligendi exercitationem sequi expedita ex aspernatur dolorem modi nulla labore voluptatem, blanditiis accusantium obcaecati.</p>
+    
+  </footer>
+
+  <script>
+    filterSelection('all')
+    function filterSelection(c) {
+      var x, i;
+      x = document.getElementsByClassName("product");
+      if (c == "all") c = "";
+      for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+      }
+    }
+
+    function w3AddClass(element, name) {
+      var i, arrl, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
+      }
+    }
+
+    function w3RemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);
         }
+      }
+      element.className = arr1.join(" ");
+    }
 
-        function w3AddClass(element, name) {
-            var i, arr1, arr2;
-            arr1 = element.className.split(" ");
-            arr2 = name.split(" ");
-            for (i = 0; i < arr2.length; i++) {
-                if (arr1.indexOf(arr2[i]) == -1) {
-                    element.className += " " + arr2[i];
-                }
-            }
-        }
-
-        function w3RemoveClass(element, name) {
-            var i, arr1, arr2;
-            arr1 = element.className.split(" ");
-            arr2 = name.split(" ");
-            for (i = 0; i < arr2.length; i++) {
-                while (arr1.indexOf(arr2[i]) > -1) {
-                    arr1.splice(arr1.indexOf(arr2[i]), 1);
-                }
-            }
-            element.className = arr1.join(" ");
-        }
-
-
-        // Add active class to the current button (highlight it)
-        var btnContainer = document.getElementById("myBtnContainer");
-        var btns = btnContainer.getElementsByClassName("btn");
-        for (var i = 0; i < btns.length; i++) {
-            btns[i].addEventListener("click", function() {
-                var current = document.getElementsByClassName("active");
-                current[0].className = current[0].className.replace(" active", "");
-                this.className += " active";
-            });
-        }
-    </script>
+    // Add active class to the current button (highlight it)
+    var btnContainer = document.getElementById("filterButtons");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function () {
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+    }
+  </script>
 
 </body>
 
