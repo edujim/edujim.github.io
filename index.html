@@ -7,35 +7,35 @@
         * {
             box-sizing: border-box;
         }
-
+        
         body {
             background-color: #f1f1f1;
             padding: 0px;
             font-family: Arial;
         }
         /* Center website */
-
+        
         .main {
             max-width: 1000px;
             margin: auto;
         }
-
+        
         h1 {
             font-size: 50px;
             word-break: break-all;
         }
-
+        
         .row {
             margin: 0px -0px;
         }
         /* Add padding BETWEEN each column */
-
+        
         .row,
         .row>.column {
             padding: 5px;
         }
         /* Create three equal columns that floats next to each other */
-
+        
         .column {
             float: left;
             width: 25%;
@@ -43,25 +43,25 @@
             /* Hide all elements by default */
         }
         /* Clear floats after rows */
-
+        
         .row:after {
             content: "";
             display: table;
             clear: both;
         }
         /* Contenido del espacio en blanco con la imagen*/
-
+        
         .content {
             background-color: white;
             padding: 5px;
         }
         /* The "show" se filtra en table para mostrar bien en celular*/
-
+        
         .show {
             display: Table;
         }
         /* Style the buttons */
-
+        
         .btn {
             border: none;
             outline: none;
@@ -69,20 +69,20 @@
             background-color: white;
             cursor: pointer;
         }
-
+        
         .btn:hover {
             background-color: #ddd;
         }
-
+        
         .btn.active {
             background-color: #666;
             color: white;
         }
-
+        
         body {
             font-family: Arial, Helvetica, sans-serif;
         }
-
+        
         .flip-box {
             background-color: transparent;
             width: 300px;
@@ -103,7 +103,7 @@
         .flip-box:hover .flip-box-inner {
             transform: rotateY(180deg);
         }
-
+        
         .flip-box-front,
         .flip-box-back {
             position: absolute;
@@ -112,73 +112,313 @@
             -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
         }
-
+        
         .flip-box-front {
             background-color: #bbb;
             color: black;
         }
-
+        
         .flip-box-back {
             background-color: rgb(57, 59, 59);
             color: white;
             transform: rotateY(180deg);
         }
-
-        .floatMenu{
-	position:fixed;
-	text-align:center;
-  font-size:30px;
-	box-shadow: 2px 2px 3px #999;
-  z-index:100;
-}
-        .float{
-	position:fixed;
-	width:60px;
-	height:60px;
-	bottom:40px;
-	right:40px;
-	background-color:#25d366;
-	color:#FFF;
-	border-radius:50px;
-	text-align:center;
-  font-size:30px;
-	box-shadow: 2px 2px 3px #999;
-  z-index:100;
-}
-.float:hover {
-	text-decoration: none;
-	color: #25d366;
-  background-color:#fff;
-}
-
-.my-float{
-	margin-top:16px;
-}
+        
+        .floatMenu {
+            position: fixed;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+        }
+        
+        .float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+        }
+        
+        .float:hover {
+            text-decoration: none;
+            color: #25d366;
+            background-color: #fff;
+        }
+        
+        .my-float {
+            margin-top: 16px;
+        }
     </style>
-   
+
 </head>
 
 
 <body>
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<a href="https://api.whatsapp.com/send?phone=50321021134&text=Quisiera información." class="float" target="_blank">
-<i class="fa fa-whatsapp my-float"></i></a>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <a href="https://api.whatsapp.com/send?phone=50321021134&text=Quisiera información." class="float" target="_blank">
+        <i class="fa fa-whatsapp my-float"></i></a>
 
-    
+
     <center>
         <!-- MAIN (Center website) -->
-        <div class= "floatMenu">
-        <div class="main">
-            <div id="myBtnContainer">
-                <button class="btn active" onclick="filterSelection('all')">Todo</button>
-                <button class="btn" onclick="filterSelection('Sandalias')">Sandalias</button>
-                <button class="btn" onclick="filterSelection('Ropa')">Ropa</button>
-                <button class="btn" onclick="filterSelection('Damas')">Damas</button>
-            </div>
+        <div class="floatMenu">
+            <div class="main">
+                <div id="myBtnContainer">
+                    <button class="btn active" onclick="filterSelection('all')">Todo</button>
+                    <button class="btn" onclick="filterSelection('Postres')">Postres</button>
+                    <button class="btn" onclick="filterSelection('Imprenta')">Imprenta</button>
+                    <button class="btn" onclick="filterSelection('Sandalias')">Sandalias</button>
+                </div>
     </center>
     <!-- Portfolio Gallery Grid -->
     <div class="row">
+        <div class="column Postres">
+            <div class="content">
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <img src="Postres/Postre 01.jpg" alt="Postres" style="width:100%">
+                        </div>
+                        <div class="flip-box-back">
+                            <h2>Precio: $1.50 dls.</h2>
+                            <h3>Vasito</h3>
+                            <h4>Pastel de Manzana</h4>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column Postres">
+            <div class="content">
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <img src="Postres/Postre 02.jpg" alt="Postres" style="width:100%">
+                        </div>
+                        <div class="flip-box-back">
+                            <h2>Precio: $1.50 dls.</h2>
+                            <h3>Vasito</h3>
+                            <h4>Chesse cake de chocolate blanco</h4>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column Postres">
+            <div class="content">
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <img src="Postres/Postre 03.jpg" alt="Postres" style="width:100%">
+                        </div>
+                        <div class="flip-box-back">
+                            <h2>Precio: $1.50 dls.</h2>
+                            <h3>Vasito</h3>
+                            <h4></h4>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column Postres">
+            <div class="content">
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <img src="Postres/Postre 04.jpg" alt="Postres" style="width:100%">
+                        </div>
+                        <div class="flip-box-back">
+                            <h2>Precio: $1.50 dls.</h2>
+                            <h3>Vasito</h3>
+                            <h4></h4>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column Postres">
+            <div class="content">
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <img src="Postres/Postre 05.jpg" alt="Postres" style="width:100%">
+                        </div>
+                        <div class="flip-box-back">
+                            <h2>Precio: $1.00 dls.</h2>
+                            <h3>Cajita</h3>
+                            <h4></h4>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column Imprenta">
+            <div class="content">
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <img src="Imprenta/Anillados 01.jpg" alt="Imprenta" style="width:100%">
+                        </div>
+                        <div class="flip-box-back">
+                            <h2>Anillados</h2>
+                            <h3>Impresión Color / BN</h3>
+                            <h4></h4>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column Imprenta">
+            <div class="content">
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <img src="Imprenta/Copias 01.jpg" alt="Imprenta" style="width:100%">
+                        </div>
+                        <div class="flip-box-back">
+                            <h2>Copias</h2>
+                            <h3>Color / BN</h3>
+                            <h4></h4>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column Imprenta">
+            <div class="content">
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <img src="Imprenta/Empastados 01.jpg" alt="Imprenta" style="width:100%">
+                        </div>
+                        <div class="flip-box-back">
+                            <h2>Empastados</h2>
+                            <h3>Tesis / Sencillo</h3>
+                            <h4>Impresión Color / BN</h4>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column Imprenta">
+            <div class="content">
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <img src="Imprenta/Papeleria 01.jpg" alt="Imprenta" style="width:100%">
+                        </div>
+                        <div class="flip-box-back">
+                            <h2>Papelería Médica</h2>
+                            <h3>Impresión Láser</h3>
+                            <h4></h4>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column Imprenta">
+            <div class="content">
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <img src="Imprenta/Papeleria Fiscal 01.jpg" alt="Imprenta" style="width:100%">
+                        </div>
+                        <div class="flip-box-back">
+                            <h2>Papelería Tributaría</h2>
+                            <h3>CCF / Fsctursd</h3>
+                            <h4>Impresión Láser</h4>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column Imprenta">
+            <div class="content">
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <img src="Imprenta/Recetarios 01.jpg" alt="Imprenta" style="width:100%">
+                        </div>
+                        <div class="flip-box-back">
+                            <h2>Recetarios</h2>
+                            <h3>Impresión Láser</h3>
+                            <h4>Block 50 hojas</h4>
+                            <p>Media Carta</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column Imprenta">
+            <div class="content">
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <img src="Imprenta/Sellos 01.jpg" alt="Imprenta" style="width:100%">
+                        </div>
+                        <div class="flip-box-back">
+                            <h2>Sellos</h2>
+                            <h3>Tamaños Personalizados</h3>
+                            <h4>Base Plástica</h4>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column Imprenta">
+            <div class="content">
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <img src="Imprenta/Stickers 01.jpg" alt="Imprenta" style="width:100%">
+                        </div>
+                        <div class="flip-box-back">
+                            <h2>Stickers Personalizados</h2>
+                            <h3>Impresión Láser</h3>
+                            <h4>Papel Adhesivo & Vinil</h4>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column Imprenta">
+            <div class="content">
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <img src="Imprenta/Tarjetas 01.jpg" alt="Imprenta" style="width:100%">
+                        </div>
+                        <div class="flip-box-back">
+                            <h2>Tarjetas Personalizados</h2>
+                            <h3>Impresión Láser</h3>
+                            <h4>Material: Folcote, Canso</h4>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="column Sandalias">
             <div class="content">
                 <div class="flip-box">
@@ -383,473 +623,15 @@
                 </div>
             </div>
         </div>
-        <div class="column Ropa">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Ropa/01 Ropa.jpg" alt="Ropa" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio: $3.50 dls.</h2>
-                            <h3>Talla: -</h3>
-                            <p>Fardito de Segunda</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Ropa">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Ropa/02 Ropa.jpg" alt="Ropa" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio: $3.50 dls.</h2>
-                            <h3>Talla: -</h3>
-                            <p>Fardito de Segunda</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Ropa">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Ropa/03 Ropa.jpg" alt="Ropa" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio: $3.50 dls.</h2>
-                            <h3>Talla: -</h3>
-                            <p>Fardito de Segunda</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Ropa">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Ropa/04 Ropa.jpg" alt="Ropa" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio: $3.50 dls.</h2>
-                            <h3>Talla: -</h3>
-                            <p>Fardito de Segunda</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Ropa">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Ropa/05 Ropa.jpg" alt="Ropa" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio: $3.50 dls.</h2>
-                            <h3>Talla: -</h3>
-                            <p>Fardito de Segunda</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Ropa">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Ropa/06 Ropa.jpg" alt="Ropa" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio: $3.50 dls.</h2>
-                            <h3>Talla: -</h3>
-                            <p>Conjunto de Segunda</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Ropa">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Ropa/07 Ropa.jpg" alt="Ropa" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio: $3.50 dls.</h2>
-                            <h3>Talla: -</h3>
-                            <p>Conjunto de Segunda</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Ropa">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Ropa/08 Ropa.jpg" alt="Ropa" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio: $3.50 dls.</h2>
-                            <h3>Talla: -</h3>
-                            <p>Mamelucos de Segunda</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Ropa">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Ropa/09 Ropa.jpg" alt="Ropa" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio: $3.50 dls.</h2>
-                            <h3>Talla: -</h3>
-                            <p>Pijamas de Segunda</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Ropa">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Ropa/010 Ropa.jpg" alt="Ropa" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio: $3.99 dls.</h2>
-                            <h3>Talla: -</h3>
-                            <p>Pijama de Segunda</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Ropa">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Ropa/011 Ropa.jpg" alt="Ropa" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio: $3.99 dls.</h2>
-                            <h3>Talla: -</h3>
-                            <p>Mamelucos de Segunda</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Ropa">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Ropa/012 Ropa.jpg" alt="Ropa" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio: $3.99 dls.</h2>
-                            <h3>Talla: -</h3>
-                            <p>Conjunto de Segunda</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Ropa">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Ropa/013 Ropa.jpg" alt="Ropa" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio: $3.99 dls.</h2>
-                            <h3>Talla: -</h3>
-                            <p>Conjunto de Segunda</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Ropa">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Ropa/014 Ropa.jpg" alt="Ropa" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio: $3.99 dls.</h2>
-                            <h3>Talla: -</h3>
-                            <p>Conjunto de Segunda</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Ropa">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Ropa/015 Ropa.jpg" alt="Ropa" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio: $3.99 dls.</h2>
-                            <h3>Talla: -</h3>
-                            <p>Conjunto de Segunda</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Ropa">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Ropa/016 Ropa.jpg" alt="Ropa" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio: $4.99 dls.</h2>
-                            <h3>Talla: -</h3>
-                            <p>Conjunto de Segunda</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Ropa">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Ropa/017 Ropa.jpg" alt="Ropa" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio: $4.99 dls.</h2>
-                            <h3>Talla: -</h3>
-                            <p>Conjunto de Premium</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Ropa">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Ropa/018 Ropa.jpg" alt="Ropa" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio: $4.99 dls.</h2>
-                            <h3>Talla: -</h3>
-                            <p>Ropa de Segunda</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Damas">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Damas/01 Dama.jpg" alt="Damas" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio:-</h2>
-                            <h3>Talla: -</h3>
-                            <p>Ropa de Segunda</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Damas">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Damas/02 Dama.jpg" alt="Damas" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio:-</h2>
-                            <h3>Talla: -</h3>
-                            <p>Ropa de Segunda</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Damas">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Damas/03 Dama.jpg" alt="Damas" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio:-</h2>
-                            <h3>Talla: -</h3>
-                            <p>Ropa de Segunda</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Damas">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Damas/04 Dama.jpg" alt="Damas" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio:-</h2>
-                            <h3>Talla: -</h3>
-                            <p>Ropa de Segunda</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Damas">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Damas/05 Dama.jpg" alt="Damas" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio:-</h2>
-                            <h3>Talla: -</h3>
-                            <p>Ropa de Segunda</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Damas">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Damas/06 Dama.jpg" alt="Damas" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio:-</h2>
-                            <h3>Talla: -</h3>
-                            <p>Ropa de Segunda</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Damas">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Damas/07 Dama.jpg" alt="Damas" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio:-</h2>
-                            <h3>Talla: -</h3>
-                            <p>Ropa de Segunda</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Damas">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Damas/08 Dama.jpg" alt="Damas" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio:-</h2>
-                            <h3>Talla: -</h3>
-                            <p>Ropa de Segunda</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Damas">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Damas/09 Dama.jpg" alt="Damas" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio:-</h2>
-                            <h3>Talla: -</h3>
-                            <p>Ropa de Segunda</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Damas">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Damas/010 Dama.jpg" alt="Damas" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio:-</h2>
-                            <h3>Talla: -</h3>
-                            <p>Ropa de Segunda</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column Damas">
-            <div class="content">
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <img src="Damas/011 Dama.jpg" alt="Damas" style="width:100%">
-                        </div>
-                        <div class="flip-box-back">
-                            <h2>Precio:-</h2>
-                            <h3>Talla: -</h3>
-                            <p>Ropa de Segunda</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <!-- END GRID -->
+
+
+        <!-- END GRID -->
     </div>
-    <center><footer><p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span>Derechos Reservados 2022.</p> </footer></center>
+    <center>
+        <footer>
+            <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span>Derechos Reservados 2022.</p>
+        </footer>
+    </center>
     <!-- END MAIN -->
     <script>
         filterSelection("all")
